@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main () {
-printf("hello world");
+asdf
+asdf
+afdd
 return 0;
 }
