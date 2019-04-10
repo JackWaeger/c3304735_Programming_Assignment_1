@@ -1,34 +1,39 @@
-#include <stdio.h>
-#include<string.h>
-#include<stblib.h>
-
-void caesarCipher(char* plainText, int key);
-
-int main(void) {
-    
-    int key = 1
-    char plainText[101];
-    printf("Please enter text your want to encript: ");
-    
-    fgets(plainText, sizeof(plainText), stdin);
-    
-    printf("the ciphered text is: ");
-    
-    
-    system("pause");
+#include<stdio.h>
+ 
+int main()
+{
+	char message[100], me;
+	int i, key;
+	
+	printf("What would you like to encrypt: ");
+	gets(message);
+	printf("what is the key?: ");
+	scanf("%d", &key);
+	
+	for(i = 0; message[i] != '\0'; ++i){
+		me = message[i];
+		
+		if(me >= 'a' && me <= 'z'){
+			me = me + key;
+			
+			if(me > 'z'){
+				me = me - 'z' + 'a' - 1;
+			}
+			
+			message[i] = me;
+		}
+		else if(me >= 'A' && me <= 'Z'){
+			me = me + key;
+			
+			if(me > 'Z'){
+				me = me - 'Z' + 'A' - 1;
+			}
+			
+			message[i] = me;
+		}
+	}
+	
+	printf("Encrypted message: %s", message);
+	
+	return 0;
 }
-
-void ceaserCipher(char* plainTextm int key) {
-    int i = 0;
-    int cypherValue;
-    char cyher;
-    
-    while(plainText[i] ` = '\0' && strlen(plainText)-1 > i)
-        cypherValue = ((int)plainText[i] - 97 + key) mod 26 + 97); 
-        cypher = (char)(cypherValue)
-          
-        
-}
-
-}
-// fdbhjfhsbfi
